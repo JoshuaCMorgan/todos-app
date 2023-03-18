@@ -8,7 +8,7 @@ const port = 3000;
 app.set('views', './views'); // where to find views templates
 app.set('views engine', 'pug'); // tells to use Pug as view engine
 
-app.use('morgan'); // enable logging with morgan
+app.use(morgan('common')); // enable logging with morgan
 
 app.get('/', (req, res, next) => {
   res.render('list')
